@@ -1,0 +1,24 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.active span:nth-child(1) {
+  transform: rotate(45deg);
+  transform-origin: top left;
+}
+
+.active span:nth-child(2) {
+  transform: scale(0);
+}
+
+.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+}
+
+.cz-background {
+  background-image: url('../img/render.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

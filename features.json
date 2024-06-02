@@ -1,0 +1,14 @@
+[
+  {
+    "name": "stamina",
+    "des": "Mekanik ini mengharuskan kalian untuk bersabar dan efisien. Dengan adanya stamina kalian akan dibatasi untuk melakukan kegiatan yang sangat melelahkan.\n\n%code\n%tconst%# [ break, hit, hited, run, swim ] = %rPlayer%#.stamina(%y-1%#).apply(\"stamina_cooldown\",%y3%#);<br><br>\n%Rif%#(!%rPlayer%#.isMoving || %rPlayer%#.isDrink || %rPlayer%#.isEat) %rPlayer%#.stamina(%y2%#)\n%=code\n<br>\nTerdapat beberapa status efek yang akan mengurangi/menambah stamina kalian.\nSetiap naik level spesialismu akan menambahkan maksimal staminamu"
+  },
+  {
+    "name": "reputasi",
+    "des": "Reputasimu selama bermain Minecraft.\nKamu dapat menaikan reputasimu dengan menyelesaikan misi yang kamu dapatkan.\n\nSemakin tinggi reputasimu, misi yang didapatkan akan lebih sulit namun imbalan yang besar juga"
+  },
+  {
+    "name": "Haus",
+    "des": "Mekanik ini mengharuskan kalian tetap meminum minuman/makanan untuk bertahan hidup. Dengan meminum, kalian juga akan mendapatkan sedikit stamina point.\n\nBerbeda halnya dengan stamina, ini akan selalu berkurang setiap waktu. Dan juga maksimal poin haus tidak dapat di naikan."
+  }
+]
