@@ -23,7 +23,7 @@ window.onload = async () => {
   await fetch("features.json")
     .then(e => e.json())
     .then(r => {
-      fitur = [...r];
+      fitur = [...r.sort((a, b) => a.name.localeCompare(b.name))];
     });
 
   await fetch(
@@ -43,7 +43,7 @@ window.onload = async () => {
       i === 0 ? "<r class='text-teal-200 font-bold'> [New]</r> " : ""
     }<b>${e.name}${e.build ? "<span>(" + e.build + ")</span>" : ""} ${
       e.versi
-    }</b><br/><p class="font-mono">Mc ${e.mc}</p></a>`;
+    }</b><br/><p class="font-mono">${e.mc}</p></a>`;
   });
 
   fitur.forEach(e => {
@@ -54,26 +54,117 @@ window.onload = async () => {
     }</a>`;
     document.querySelector(
       "#fitur-index"
-    ).innerHTML += `<div id="fitur-${e.name.toLowerCase()}" class="bg-slate-800 py-5 px-3 my-2"><h2 class="font-bold text-xl">${
+    ).innerHTML += `<div id="fitur-${e.name.toLowerCase()}" class="bg-slate-800 py-3 px-2 my-2 w-full lg:w-[46%] lg:mx-[2%] rounded"><h2 class="font-bold text-xl">${
       e.name.charAt(0).toUpperCase() + e.name.slice(1)
-    }</h2><p class="whitespace-pre-wrap text-xs lg:text-sm">${e.des
-      .split(" ")
-      .map(f => {
-        return f
-          .replace(
-            /%code/g,
-            "<p class='bg-indigo-900/[0.5] text-xs font-mono px-1 py-2'>"
-          )
-          .replace(/%t/g, "<span class='text-teal-800'>")
-          .replace(/%gr/g, "<span class='text-gray-600'>")
-          .replace(/%g/g, "<span class='text-green-600'>")
-          .replace(/%R/g, "<span class='text-red-700'>")
-          .replace(/%y/g, "<span class='text-yellow-300'>")
-          .replace(/%r/g, "<span class='text-rose-400'>")
-          .replace(/%#/g, "</span>")
-          .replace(/%=code/g, "</p>");
+    }</h2><p class="whitespace-pre-wrap text-xs lg:text-sm">${e.content
+      ?.map(s => {
+        let ret = s,
+          args = s.split(/\s+/).map(d => {
+            return d.trim();
+          });
+        switch (args[0]) {
+          case "%code":
+            args.splice(
+              0,
+              1,
+              "<span class='whitespace-pre bg-teal-900 source-code overflow-x-scroll py-1 text-xs px-1 block max-w-full'>"
+            );
+            args.push("</span>");
+            ret = args
+              .map(c => {
+                let out = c.split("");
+                if (c.startsWith("%")) {
+                  switch (out[1]) {
+                    case "g":
+                      out.splice(0, 2, "<span class='text-emerald-200'>");
+                      out.splice(
+                        out.findIndex(h => h === "#") !== -1
+                          ? out.findIndex(h => h === "#")
+                          : out.length,
+                        1,
+                        "</span>"
+                      );
+                      break;
+                    case "G":
+                      out.splice(0, 2, "<span class='text-gray-300'>");
+                      out.splice(
+                        out.findIndex(h => h === "#") !== -1
+                          ? out.findIndex(h => h === "#")
+                          : out.length,
+                        1,
+                        "</span>"
+                      );
+                      break;
+                    case "r":
+                      out.splice(0, 2, "<span class='text-rose-500'>");
+                      out.splice(
+                        out.findIndex(h => h === "#") !== -1
+                          ? out.findIndex(h => h === "#")
+                          : out.length,
+                        1,
+                        "</span>"
+                      );
+                      break;
+                    case "l":
+                      out.splice(0, 2, "<span class='text-lime-300'>");
+                      out.splice(
+                        out.findIndex(h => h === "#") !== -1
+                          ? out.findIndex(h => h === "#")
+                          : out.length,
+                        1,
+                        "</span>"
+                      );
+                      break;
+                    case "f":
+                      out.splice(0, 2, "<span class='text-fuchsia-500'>");
+                      out.splice(
+                        out.findIndex(h => h === "#") !== -1
+                          ? out.findIndex(h => h === "#")
+                          : out.length,
+                        1,
+                        "</span>"
+                      );
+                      break;
+                    case "b":
+                      out.splice(0, 2, "<span class='text-sky-400'>");
+                      out.splice(
+                        out.findIndex(h => h === "#") !== -1
+                          ? out.findIndex(h => h === "#")
+                          : out.length,
+                        1,
+                        "</span>"
+                      );
+                      break;
+                    case "y":
+                      out.splice(0, 2, "<span class='text-amber-500'>");
+                      out.splice(
+                        out.findIndex(h => h === "#") !== -1
+                          ? out.findIndex(h => h === "#")
+                          : out.length,
+                        1,
+                        "</span>"
+                      );
+                      break;
+                    case "o":
+                      out.splice(0, 2, "<span class='text-orange-600'>");
+                      out.splice(
+                        out.findIndex(h => h === "#") !== -1
+                          ? out.findIndex(h => h === "#")
+                          : out.length,
+                        1,
+                        "</span>"
+                      );
+                      break;
+                  }
+                }
+                return out.join("").replace(/-!/g, " ");
+              })
+              .join(" ");
+            break;
+        }
+        return `${ret}`;
       })
-      .join(" ")}</p></div>`;
+      .join("\n\n")}</p></div>`;
   });
 
   Object.keys(bzb.down[0].update)

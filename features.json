@@ -1,14 +1,31 @@
 [
   {
     "name": "stamina",
-    "des": "Mekanik ini mengharuskan kalian untuk bersabar dan efisien. Dengan adanya stamina kalian akan dibatasi untuk melakukan kegiatan yang sangat melelahkan.\n\n%code\n%tconst%# [ break, hit, hited, run, swim ] = %rPlayer%#.stamina(%y-1%#).apply(\"stamina_cooldown\",%y3%#);<br><br>\n%Rif%#(!%rPlayer%#.isMoving || %rPlayer%#.isDrink || %rPlayer%#.isEat) %rPlayer%#.stamina(%y2%#)\n%=code\n<br>\nTerdapat beberapa status efek yang akan mengurangi/menambah stamina kalian.\nSetiap naik level spesialismu akan menambahkan maksimal staminamu"
+    "content": [
+      "Mekanik ini mengharuskan kalian untuk bersabar dan efisien. Dengan adanya stamina kalian akan dibatasi untuk melakukan kegiatan yang sangat melelahkan.",
+      "Terdapat beberapa status efek yang akan mengurangi/menambah stamina kalian.\nSetiap naik level spesialismu akan menambahkan maksimal staminamu",
+      "%code \n%rimport { Specialist } from %l\"@bzb/system.js\"#;<br>\n%yconst { breaking, hit, isSprinting, isSwimming } = %bPlayer#;<br>\n%ylet sp = %rnew Specialist( %bPlayer );<br><br>\n%fif#( isSprinting || isSwimming ) {<br>\n&nbsp; sp.minStamina( %l\"value\"#, %r2# )<br>\n&nbsp; sp.cooldown().setCd( %l\"stamina_regen\"#,  %r3 )<br>\n} %felse-!if#( breaking || hit ) {<br>\n&nbsp; sp.minStamina( %l\"value\"#, %r5# )<br>\n&nbsp; sp.cooldown().setCd( %l\"stamina_regen\"#,  %r3 )<br>\n} %felse sp.cooldown().getCd( %l\"stamina_regen\"# ) ? %r0 : sp.addStamina( %l\"value\"#, %r2# )"
+    ]
   },
   {
     "name": "reputasi",
-    "des": "Reputasimu selama bermain Minecraft.\nKamu dapat menaikan reputasimu dengan menyelesaikan misi yang kamu dapatkan.\n\nSemakin tinggi reputasimu, misi yang didapatkan akan lebih sulit namun imbalan yang besar juga"
+    "content": [
+      "Reputasimu selama bermain Minecraft.\nKamu dapat menaikan reputasimu dengan menyelesaikan misi yang kamu dapatkan.",
+      "Semakin tinggi reputasimu, misi yang didapatkan akan lebih sulit namun imbalan yang besar juga"
+    ]
   },
   {
     "name": "Haus",
-    "des": "Mekanik ini mengharuskan kalian tetap meminum minuman/makanan untuk bertahan hidup. Dengan meminum, kalian juga akan mendapatkan sedikit stamina point.\n\nBerbeda halnya dengan stamina, ini akan selalu berkurang setiap waktu. Dan juga maksimal poin haus tidak dapat di naikan."
+    "content": [
+      "Mekanik ini mengharuskan kalian tetap meminum minuman/makanan untuk bertahan hidup. Dengan meminum, kalian juga akan mendapatkan sedikit stamina point.",
+      "Berbeda halnya dengan stamina, ini akan selalu berkurang setiap waktu. Dan juga maksimal poin haus tidak dapat di naikan."
+    ]
+  },
+  {
+    "name": "Ekonomi",
+    "content": [
+      "Terdapat 2 jenis ekonomi untuk player:\n• Uang bisa di gunakan untuk membeli sesuatu dan lainnya.\n• Voxn didapatkan dari beberapa misi saja, biasanya digunakan untuk meningkatkan kostum modifikasi senjata.\n\nEkonomi di addon ini termasuk sulit didapatkan karena misinya yang gak ngotak juga.",
+      "%code\n%G//-!scripts/system.js<br><br>\n%bclass Specialist {<br>\n&nbsp; ...<br><br>\n&nbsp; %G//-!Fungsi-!untuk-!uang<br>\n&nbsp; getMoney() {...} %G//-!Mengambil-!data-!uang<br>\n&nbsp; addMoney(amount) {...} %G//-!Menambahkan-!uang<br>\n&nbsp; takeMoney(amount) {...} %G//-!Mengurangi-!uang<br>\n&nbsp; setMoney(amount) {...} %G//-!Mengatur-!uang<br>\n&nbsp; resetMoney() {...} %G//-!Mengatur-!ulang-!uang-!ke-!default<br>\n&nbsp; transferMoney(target, amount) {...} %G//-!Menberi-!uang-!ke-!player-!lain,-terdapat-!biayanya-!20%-!dari-!uang-!yang-!dikirim<br><br>\n&nbsp; %G//-!Fungsi-!voxn<br>\n&nbsp; getVoxn() {...} %G//-!Mengambil-!data-!voxn<br>\n&nbsp; addVoxn(amount) {...} %G//-!Menambahkan-!voxn<br>\n&nbsp; minVoxn(amount) {...} %G//-!Mengurangi-!voxn<br>\n&nbsp; setVoxn(amount) {...} %G//-!Mengatur-!voxn<br>\n&nbsp; resetVoxn() {...} %G//-!Mengaturl-!ulang-!voxn<br><br>\n&nbsp; ...<br>\n}"
+    ]
   }
 ]

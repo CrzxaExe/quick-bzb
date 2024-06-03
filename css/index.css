@@ -1,5 +1,23 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+@font-face {
+  font-family: 'Valorant';
+  src: url("../fonts/VALORANT-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: 'SourceCode';
+  src: url("../fonts/SourceCode.ttf") format("truetype");
+}
+
+.valorant {
+  font-family: 'Valorant';
+}
+.source-code {
+  font-family: 'SourceCode', Monospace;
 }
 
 .active span:nth-child(1) {
