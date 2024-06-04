@@ -26,6 +26,7 @@
     "content": [
       "Terdapat 2 jenis ekonomi untuk player:\n• Uang bisa di gunakan untuk membeli sesuatu dan lainnya.\n• Voxn didapatkan dari beberapa misi saja, biasanya digunakan untuk meningkatkan kostum modifikasi senjata.\n\nEkonomi di addon ini termasuk sulit didapatkan karena misinya yang gak ngotak juga.",
       "%code\n%G//-!scripts/system.js<br><br>\n%bclass Specialist {<br>\n&nbsp; ...<br><br>\n&nbsp; %G//-!Fungsi-!untuk-!uang<br>\n&nbsp; getMoney() {...} %G//-!Mengambil-!data-!uang<br>\n&nbsp; addMoney(amount) {...} %G//-!Menambahkan-!uang<br>\n&nbsp; takeMoney(amount) {...} %G//-!Mengurangi-!uang<br>\n&nbsp; setMoney(amount) {...} %G//-!Mengatur-!uang<br>\n&nbsp; resetMoney() {...} %G//-!Mengatur-!ulang-!uang-!ke-!default<br>\n&nbsp; transferMoney(target, amount) {...} %G//-!Menberi-!uang-!ke-!player-!lain,-terdapat-!biayanya-!20%-!dari-!uang-!yang-!dikirim<br><br>\n&nbsp; %G//-!Fungsi-!voxn<br>\n&nbsp; getVoxn() {...} %G//-!Mengambil-!data-!voxn<br>\n&nbsp; addVoxn(amount) {...} %G//-!Menambahkan-!voxn<br>\n&nbsp; minVoxn(amount) {...} %G//-!Mengurangi-!voxn<br>\n&nbsp; setVoxn(amount) {...} %G//-!Mengatur-!voxn<br>\n&nbsp; resetVoxn() {...} %G//-!Mengaturl-!ulang-!voxn<br><br>\n&nbsp; ...<br>\n}"
-    ]
+    ],
+    "grow": 2
   }
 ]

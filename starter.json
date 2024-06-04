@@ -1,0 +1,42 @@
+[
+  {
+    "name": "bahasa",
+    "des": "Saat ini hanya tersedia 2 bahasa saja yaitu Bahasa Indonesia dan Bahasa Inggris - US."
+  },
+  {
+    "name": "bertahan hidup",
+    "des": "Kesulitan bertahan hidup mungkin terjadi pada saat pertama kali bermain, karena sudah dirancang."
+  },
+  {
+    "name": "dunia",
+    "des": "Kami melakukan sedikit perubahan dari segi ini, namun akan ada struktur baru serta bioma baru."
+  },
+  {
+    "name": "entity",
+    "des": "Beberapa pilihan entity mulai dari mob, npc sampai ke boss. Vanilla entity sekarang memiliki kemampuannya dan lebih kuat."
+  },
+  {
+    "name": "item",
+    "des": "Tersedia lebih dari +70 item yang ada pada versi terbaru. Mulai dari material,makanan, alkimia dan lain-lain. Semuanya memiliki fungsi dan bahannya masing-masing.g memiliki kemampuannya dan lebih kuat."
+  },
+  {
+    "name": "kostumisasi",
+    "des": "Beberapa fitur bisa di kustomisasi. Saat membuat world pengaturan akan otomatis di atur oleh addon ini, kamu bisa mematikan fitur ini di dalam permainan."
+  },
+  {
+    "name": "mekanik",
+    "des": "Terdapat beberapa mekanik baru di sini seperti stamina, kehausan, reputasi, leveling dan lain-lain."
+  },
+  {
+    "name": "peralatan",
+    "des": "Tersedia lebih dari +20 peralatan baru dengan tingkatan yang lebih tinggi dari netherite. Semua tipe peralatan ada disini."
+  },
+  {
+    "name": "persenjataan",
+    "des": "Lebih dari +15 senjata baru dengan rarity, kemampuan, sifat serta pasif yang unik tiap senjatanya."
+  },
+  {
+    "name": "UI",
+    "des": "Terdapat sedikit perubahan mengenai ini. Namun seiringin waktu akan kami tambahkan."
+  }
+]

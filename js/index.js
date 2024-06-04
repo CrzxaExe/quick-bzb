@@ -3,6 +3,7 @@ const nav = document.querySelector("#nav-menu");
 const downData = document.querySelector("#down-data");
 let download = [],
   bzb = {},
+  starter = [],
   fitur = [];
 
 menu.addEventListener("click", () => {
@@ -25,6 +26,11 @@ window.onload = async () => {
     .then(r => {
       fitur = [...r.sort((a, b) => a.name.localeCompare(b.name))];
     });
+  await fetch("starter.json")
+    .then(e => e.json())
+    .then(r => {
+      starter = [...r.sort((a, b) => a.name.localeCompare(b.name))];
+    });
 
   await fetch(
     "https://raw.githubusercontent.com/CrzxaExe/Zxra-web/master/bzb.json"
@@ -35,6 +41,22 @@ window.onload = async () => {
     });
 
   document.querySelector("#download-latest").href = download[0].link;
+
+  starter.forEach(e => {
+    document.querySelector(
+      "#start-content"
+    ).innerHTML += `<div class="w-[48%] lg:w-[23%] p-2 m-[1%] bg-sky-200/[0.2] backdrop-blur-[5px] transition-all duration-500 ease-in-out">
+          <b class="lg:text-lg font-semibold ">${e.name
+            .split(" ")
+            .map(r => {
+              return r.charAt(0).toUpperCase() + r.slice(1);
+            })
+            .join(" ")}</b>
+          <p class="text-justify text-xs lg:text-sm">
+            ${e.des}
+          </p>
+        </div>`;
+  });
 
   download.forEach((e, i) => {
     downData.innerHTML += `<a href="${
@@ -178,8 +200,8 @@ window.onload = async () => {
         .join("\n• ");
       document.querySelector(
         "#changes"
-      ).innerHTML += `<div class="whitespace-pre-wrap w-full bg-slate-700 px-7 rounded p-3 my-2"><b class="text-lg lg:text-xl underline">${
+      ).innerHTML += `<div class="whitespace-pre-wrap truncate h-[3.2rem] w-full bg-slate-700 px-7 rounded p-3 my-2 transition-all duration-300 ease-in-out" onclick="classList.toggle('h-[3.2rem]')"><b class="text-lg lg:text-xl underline">${
         e.charAt(0).toUpperCase() + e.slice(1)
-      }</b><p class="text-xs lg:text-sm">• ${ups}</p></div>`;
+      }</b><p class="text-xs lg:text-sm mt-3">• ${ups}</p></div>`;
     });
 };
