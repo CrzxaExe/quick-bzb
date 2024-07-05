@@ -2,7 +2,7 @@
   {
     "name": " Lihat Semua",
     "versi": "",
-    "mc": "-.--.--",
+    "mc": "Semua versi BZB",
     "link": "https://drive.google.com/drive/folders/10PRI_4exiLDrHhajBzs3IfQvN7xQRbbi"
   },
   {
@@ -64,5 +64,33 @@
     "mc": "1.20.81",
     "link": "https://drive.google.com/file/d/15jQlTHucSlV7L4_XuUTSEsU9UyR6OVIe/view?usp=drivesdk",
     "build": 7
+  },
+  {
+    "name": "BZB",
+    "versi": "v1.1.2r",
+    "mc": "1.20.81",
+    "link": "https://drive.google.com/file/d/1-5T7oQLL5KhrBhLLQUaGh8LdWLL1RzNt/view?usp=drivesdk",
+    "build": 8
+  },
+  {
+    "name": "BZB",
+    "versi": "v1.1.2r",
+    "mc": "1.21.0",
+    "link": "https://drive.google.com/file/d/1-B61WY5vKySwhZGtydkQromielrJ2apA/view?usp=drivesdk",
+    "build": 9
+  },
+  {
+    "name": "BZB",
+    "versi": "v1.1.2r",
+    "mc": "1.21.0",
+    "link": "https://drive.google.com/file/d/124dZkmLa5PbhUiQyUXSClU7eqFUGFEzC/view?usp=drivesdk",
+    "build": 10
+  },
+  {
+    "name": "BZB",
+    "versi": "v1.1.2r",
+    "mc": "1.21.0",
+    "link": "https://drive.google.com/file/d/126t82v1S6aa7tpw0MP071Z9QWY1YQxvb/view?usp=drivesdk",
+    "build": 11
   }
 ]
