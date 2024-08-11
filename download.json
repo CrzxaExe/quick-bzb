@@ -6,19 +6,6 @@
     "link": "https://drive.google.com/drive/folders/10PRI_4exiLDrHhajBzs3IfQvN7xQRbbi"
   },
   {
-    "name": "Zxra RPG",
-    "versi": "v2.6.0",
-    "mc": "1.19.40",
-    "link": "https://drive.google.com/file/d/104cL_ubcTXJrccNvtnrUehylyzEr_mUN/view?usp=drivesdk"
-  },
-  {
-    "name": "Zxra RPG",
-    "versi": "v2.8.7",
-    "mc": "1.19.40",
-    "link": "https://drive.google.com/file/d/10_1f6MY93d-seHRvVwf9k0zgJ9N2VWGl/view?usp=drivesdk",
-    "build": 2
-  },
-  {
     "name": "BZB",
     "versi": "v1.1.2r",
     "mc": "1.20.0",
@@ -80,5 +67,18 @@
     "mc": "1.21.0",
     "link": "https://drive.google.com/file/d/126t82v1S6aa7tpw0MP071Z9QWY1YQxvb/view?usp=drivesdk",
     "build": 11
+  },
+  {
+    "name": "BZB",
+    "versi": "v1.2.5r-pre",
+    "mc": "1.21.2",
+    "link": "https://drive.google.com/file/d/13faPGyozqINEDKgs8-f5SvVk9FlyXkFe/view?usp=drivesdk"
+  },
+  {
+    "name": "BZB",
+    "versi": "v1.2.5r-pre",
+    "mc": "1.21.2",
+    "link": "https://drive.google.com/file/d/13aJz3QhsUfYzP8gJjjPFqOYl4TNrbB_c/view?usp=drivesdk",
+    "build": 2
   }
 ]
