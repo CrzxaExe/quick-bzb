@@ -8,13 +8,6 @@
   {
     "name": "BZB",
     "versi": "v1.1.2r",
-    "mc": "1.20.0",
-    "link": "https://drive.google.com/file/d/11GVtx4i0lHKZ5zK6HzIiagn9WDFUg6AW/view?usp=drivesdk",
-    "build": 3
-  },
-  {
-    "name": "BZB",
-    "versi": "v1.1.2r",
     "mc": "1.20.40",
     "link": "https://drive.google.com/file/d/13fmyaxH18LWpgdl3isWQiDzybFAI_hWn/view?usp=drivesdk",
     "build": 4
@@ -80,5 +73,12 @@
     "mc": "1.21.2",
     "link": "https://drive.google.com/file/d/13aJz3QhsUfYzP8gJjjPFqOYl4TNrbB_c/view?usp=drivesdk",
     "build": 2
+  },
+  {
+    "name": "BZB",
+    "versi": "v1.2.5r-pre",
+    "mc": "1.21.20",
+    "link": "https://drive.google.com/file/d/19rQovF9h7MJ2es7N_jOJsgbJQvZuvMoh/view?usp=drivesdk",
+    "build": 3
   }
 ]
